@@ -25,7 +25,7 @@ html {
 
 h3 {
     font-family: 'Cinzel', serif;
-    color: #3c89d5;
+    color: #63abf3;
     font-size: 40px;
     font-weight: 400;
     margin-left: 50px;
@@ -38,6 +38,7 @@ h4 {
     font-weight: 400;
     margin-left: 50px;
     padding: 0%;
+    color: #CCC;
 }
 
 body {

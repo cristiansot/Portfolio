@@ -53,7 +53,7 @@ html.js,
 
 .dragslider h2 span {
 	display: block;
-	font-size: 27%;
+	font-size: 34%;
     font-family: 'lato', serif;
 	font-weight: 200;
 	padding-top: 0.2em;
@@ -69,7 +69,7 @@ button.slider-switch {
 	color: transparent;
 	position: relative;
 	border: none;
-	background: url(../img/switchmin.svg) no-repeat center center;
+	background: url(../img/icons/zoom-1.svg) no-repeat center center;
 	background-size: 90%;
 	float: right;
 	outline: none;
@@ -85,7 +85,7 @@ button.slider-switch {
 }
 
 button.slider-switch.view-maxi {
-	background-image: url(../img/switchmax.svg)
+	background-image: url(../img/icons/zoom-2.svg)
 }
 
 button.slider-switch:hover {
@@ -205,7 +205,7 @@ button.slider-switch:hover {
 }
 
 .img-dragger-small .slide h2 {
-	font-size: 2.5em;
+	font-size: 2em;
 	padding-top: 1em;
 	top: 100%;
 	width: 100%;
@@ -243,13 +243,14 @@ button.slider-switch:hover {
 }
 
 button.content-switch {
+	margin-top: -9px;
 	border: 2px solid #fff;
 	border-radius: 15px;
 	width: 160px;
 	text-indent: 200%;
 	overflow: hidden;
 	white-space: nowrap;
-	background: transparent;
+	background: #1d1d1d8c;
 	color: #fff;
 	font-family: 'Lato', sans-serif;
 	position: absolute;
@@ -370,7 +371,8 @@ button.content-switch::before {
 }
 
 .pages .content h2 span {
-	color: #b8b8b8;
+	color: #d59a3c;
+	font-weight: 400;
 }
 
 .pages .content p {
@@ -380,6 +382,7 @@ button.content-switch::before {
 	line-height: 1.5;
 	text-align: left;
     font-family: 'Cinzel', serif;
+	color: #CCC;
 }
 
 .pages .content p:last-child {
@@ -416,7 +419,7 @@ button.content-switch::before {
 }
 
 .pages .content a {
-	color: #3c89d5;
+	color: #d59a3c;
 	display: block;
 }
 
@@ -464,7 +467,7 @@ img {
   .masonry {
 	  column-count: 3;
 	  column-gap: 16px;
-	  padding: 14px;
+	  margin-left: 42px;
   }
   
   .masonry .mItem {
@@ -489,5 +492,25 @@ img {
 	.masonry {
 	  column-count: 1;
 	}
+
+	.dragslider h2 {
+		font-size: 5em;
+		font-weight: 400;
+		margin: 0 auto 0 -24px;
+		line-height: 1;
+		position: relative;
+	}
+
+	.js .pages .content {
+		left: -20px;
+	}
+
+	.pages .content h2 {
+		font-size: 3em;
+	}
+
+	.column2 {
+		margin-left: -94px;
+   		margin-top: -80px;
+	}
   }
-  
