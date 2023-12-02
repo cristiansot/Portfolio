@@ -244,6 +244,7 @@ button.slider-switch:hover {
 
 button.content-switch {
 	border: 2px solid #fff;
+	border-radius: 15px;
 	width: 160px;
 	text-indent: 200%;
 	overflow: hidden;
@@ -253,7 +254,7 @@ button.content-switch {
 	font-family: 'Lato', sans-serif;
 	position: absolute;
 	cursor: pointer;
-	top: 100%;
+	top: 99%;
 	left: 50%;
 	-webkit-transform: translate3d(-50%,-200%,0);
 	transform: translate3d(-50%,-200%,0);
@@ -331,9 +332,10 @@ button.content-switch::before {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
-	background: #dfe3e3;
+	background: #2c3135;
+	margin-top: 80px;
 	text-align: left;
-	color: #63696e;
+	color: #b8b8b8;
 	font-size: 1.4em;
 	line-height: 1;
 	font-weight: 400;
@@ -359,7 +361,7 @@ button.content-switch::before {
 .pages .content h2 {
 	font-family: 'Cinzel', serif;
 	font-size: 4em;
-	color: #34495e;
+	color: #63abf3;
 	margin-left: 50px;
 }
 
@@ -368,7 +370,7 @@ button.content-switch::before {
 }
 
 .pages .content h2 span {
-	color: #95a5a6;
+	color: #b8b8b8;
 }
 
 .pages .content p {
