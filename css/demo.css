@@ -186,6 +186,31 @@ a:hover, a:focus {
 	content: "\e004";
 }
 
+.title {
+	margin-top: 6px;
+	color: #d49f3e;
+}
+
+#company {
+	margin-top: -34px;
+}
+
+#bajada {
+	margin-top: -34px;
+}
+
+.skills {
+	line-height: 40px;
+}
+
+#summary {
+	margin-top: 38px;
+}
+
+.phone {
+	color: #f4ea5c;
+}
+
 @media screen and (max-width: 650px) {
 	.message {
 		display: block;

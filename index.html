@@ -12,14 +12,13 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/counter.css" />
   		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container">
 		
 			<header id="header" class="codrops-header">
-				<!-- <h1>Draggable Dual-View Slideshow</h1> -->
-				<!-- <span class="message">This mobile version does not have the slideshow switch</span> -->
 				<button class="slider-switch">Switch view</button>
 			</header>
 			<div id="overlay" class="overlay">
@@ -30,8 +29,9 @@
 					<div class="handle">
 						<div class="slide" data-content="content-1">
 							<div class="img-wrap"><img src="img/1.jpg" alt="img1"/></div>
-							<h2>Cristian Soto M.<span>Graphic Designer | Industrial Designer | UX/UI Designer | 3D Modeler | Software Developer (in progress) </span></h2>
+							<h2>Cristian Soto M.<span>Graphic Designer | Industrial Designer | UX/UI Designer | 3D Modeler | Software Developer (in progress) </span> <span class="phone">Phone: +569 3138 3575 - e-mail: csoto@gssd.cl</span></h2>
 							<button class="content-switch">Read more</button>
+							
 						</div>
 						<div class="slide" data-content="content-2">
 							<div class="img-wrap"><img src="img/2.jpg" alt="img2"/></div>
@@ -61,79 +61,109 @@
 					<div class="content" data-content="content-1">
 						
 						<div>
-							<h2 class="resume">Resume<span>Phone: +569 3138 3575 - e-mail: csoto@gssd.cl</span></h2>
-
-							<h3>Projects</h3>
-							<p>2022 - Lead a team of 4 people to develop a digital magazine for the Neurosurgery Institute.<br><br>
-							   2021 - Design and creation of 2 apps with backend, leading a team of 3 people.</p>
-
-							<h3>Experience</h3>
-							<h4>Graphic Solutions Apr. 2016 - present.</h4>
-							<p>Graphic design, industrial design, 3D modeling, 3D rendering.<br>
-								
-							<h4>Automa Electrónica Apr. 2015 - May 2016. 1 year 2 months<br></h4>
-							<p>Designing the company's main website. Responsible for maintaining the site and also for the photographic catalog. Designing graphic elements for the website (banners, mailings, posters, etc.).<br></p>
-		
-							<h4>Depósito Central de Valores (DCV) Jan. 2008 - Feb. 2014. 6 years 2 months<br></h4>
-							<p>Maintaining the corporate Intranet website, designing corporate stationery (posters, flyers, packaging, mailings, inserts, virtual magazine, physical invitations, etc.). Responsible for designing corporate manuals, software, spelling checkers, physical magazines, etc. Video editor and animator.<br></p>
-								
-							<h4>Solo Marketing Jan. 2007 - Nov. 2008. 1 year 11 months<br></h4>
-							<p>Multimedia designer, creating Flash presentations, 3D prototypes, stands, POP, etc.<br></p>
-								
-							<h4>Publiguias Jun. 2006 - Dec. 2006. 7 months<br></h4>
-							<p>Design and layout.<br></p>
-								
-							<h4>TVN (Televisión Nacional de Chile) Jan. 2006 - Jun. 2006<br></h4>
-							<p>Designing graphic elements in After Effects and Photoshop.<br></p>
-							<p></p>
+							<h2 class="resume">Professional Summary</h2>
+							<p id="summary">Creative web Developer with over 20 years facilitating and supporting human interactions with complex systems and software.
+								Have professional experience with successful track record in developing innovative web designs and features. Possess solid
+								knowledge of HTML, CSS, JavaScript with ability to quickly learn new technologies. Demonstrated success in identifying and
+								resolving complex code issues. Experienced working with teams to produce impactful, leading-edge websites that engage
+								customers and deliver business results. Well-versed in design standards and user preferences.</p>
 
 							<h3>Education</h3>
-							<p>INACAP - Professional Graphic Design - 1997 - 2001, graduated.<br></p>
-							<p>IPCH - Comprehensive Design - 2008 - 2011, graduated.<br></p>
-							<p>CODING IN COLOUR (Canada) - Full Stack JavaScript - 2023, studying.</p>
+							<h4 class="title">Full Stack JS</h4>
+							<p id="bajada">Coding in Colour | Canada - Jan 2011<br></p>
+								
+							<h4 class="title">Comprehensive Design</h4>
+							<p id="bajada">IPCH | South America, Chile - Jan 2001<br></p>
+		
+							<h4 class="title">Professional Graphic Design</h4>
+							<p id="bajada">INACAP | South America, Chile<br></p>
+
+							<h3>Work History</h3>
+							<p>Apr 2016 - Sep 2022<br></p>
+							<h4 class="title">UX/UI Designer<br></h4>
+							<p id="company">Graphic Solutions - South America, Chile</p><br>
+							
+							<p>Developed and maintained front-end code for websites, ensuring cross-browser compatibility and responsive design.
+								Implemented dynamic and interactive features using HTML, CSS, and React.<br>
+								Increased user satisfaction with mobile applications through the development of responsive and visually appealing interfaces.<br>
+								Improved website conversion rates through strategic placement of call-to-action elements within UI designs.<br>
+								Enhanced project efficiency by creating high-quality 3D models for various industries, including architecture, gaming, and film.<br><br></p>
+
+							<p>Apr 2014 - May 2016<br></p>
+							<h4 class="title">Web Designer<br></h4>
+							<p id="company">Automa Electrónica - South America, Chile</p><br>
+							
+							<p>Used HTML/CSS editors like: Sublime Text, Visual Studio Code, or Atom for coding and styling which implemented usability enhancements based on user feedback,
+								resulting in a 30% decrease in support ticket submissions.<br>
+								Designed user interfaces using Figma and Adobe XD for multiple web applications, improving overall user experience and increasing user engagement.<br>
+								Boosted client satisfaction by delivering visually appealing and intuitive web designs tailored to their specific needs.<br>
+								Created custom graphics and icons using Adobe Photoshop & Illustrator that contributed to a visually cohesive brand identity across the website.<br><br></p>
+
+							<p>Jan 2008 - Feb 2014<br></p>
+							<h4 class="title">Website Developer<br></h4>
+							<p id="company">Depósito Central de Valores (DCV) - South America, Chile</p><br>
+							
+							<p>Maintaining the corporate Intranet website, designing corporate stationery (posters, flyers, packaging, mailings, inserts, virtual magazine, physical invitations, etc.)
+								Responsible for designing corporate manuals, software, spelling checkers, physical magazines.
+								Redesigned the homepage, leading to a 15% increase in user engagement metrics.
+								Implemented responsive design for a complex web application, reducing bounce rates on mobile devices by 25%.
+								Integrated third-party APIs to incorporate dynamic content and enhance overall website functionality.<br><br></p>
+
+							<p>Jan 2007 - Nov 2008<br></p>
+							<h4 class="title">Multimedia Designer<br></h4>
+							<p id="company">Solo Marketing - South America, Chile</p><br>
+							
+							<p>Designing and developing 3D prototypes for products, displays, or architectural visualization.<br>
+								Collaborated with cross-functional teams to develop cohesive branding strategies and visual identities for clients.<br>
+								Designing visually appealing stands and POP displays for retail environments, trade shows, and promotional events.<br>
+								Designed marketing materials such as brochures, flyers, and social media graphics for increased brand visibility.<br>
+								Created visually appealing eLearning modules for a variety of industries, improving employee training outcomes.<br>
+								Implemented accessible design principles across all digital assets, promoting inclusivity for users of varying abilities.<br><br></p>
+								
 							<br></br>
 							<br></br>
 						</div>
 
 						<div class="column2">
 
-							<h3>Abstract</h3>
-							<h4>Cristian Soto Morales<br>
-								Graphic Designer<br>
-								Industrial Designer<br>
-								3D Modeler<br>
-								Software Developer<br>
-							</h4>
-
-							<h3>Technical Skills</h3>
-							<h4>Suit Adobe<br>
+							<h3>Skills</h3>
+							<h4 class="skills">Graphics designer<br>
+								Front-end programmer<br>
+								UX/UI designer<br>
+								Python programmer<br>
+								Javascript programmer<br>
+								3d modeler<br>
+								Adobe Suite<br>
 								HTML 5<br>
-								CSS 3<br>
+								CSS<br>
 								Bootstrap<br>
-								Figma<br>
 								Logic Pro<br>
-								Wordpress<br>
+								WordPress<br>
 								3D MAX<br>
 								Vray<br>
-								Python<br>
+								Figma<br>
 								JavaScript<br>
+								Node.js<br>
 								React<br>
-							</h4>
-							
-							<h3>Certificates</h3>
-							<h4>PHP<br>
-								Teamwork skills<br>
-								UX/UI Design<br>
+								Git<br>
 								Python (elemental)<br>
 							</h4>
 							
+							<h3>Certifications</h3>
+							<h4 class="skills">PHP<br>
+								UX/UI Design<br>
+								Python (elemental)<br>
+								Full Stack Developer<br>
+								Teamwork<br>
+							</h4>
+							
 							<h3>Languages</h3>
-							<h4>Spanish: Native<br>
-								English: C1<br>
+							<h4 class="skills">Spanish<br>
+								English<br>
 							</h4>
 
 							<H4 class="related">
-								Let's work? <a href="mailto:csoto@gssd.cl">Write me</a>
+								<h3>Let's work? <a href="mailto:csoto@gssd.cl">Write me</a></h3> 
 							</H4>
 						</div>
 					</div>
