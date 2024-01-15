@@ -513,4 +513,10 @@ img {
 		margin-left: -94px;
    		margin-top: -80px;
 	}
+
+	h2 {
+		margin-top: -10px;
+		margin-left: 0px !important;
+		font-size: 60px !important;
+	}
   }
