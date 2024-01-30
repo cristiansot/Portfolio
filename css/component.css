@@ -494,11 +494,8 @@ img {
 	}
 
 	.dragslider h2 {
-		font-size: 5em;
-		font-weight: 400;
-		margin: 0 auto 0 -24px;
-		line-height: 1;
-		position: relative;
+	
+		margin-left: 46px !important;
 	}
 
 	.js .pages .content {
