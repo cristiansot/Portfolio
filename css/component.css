@@ -518,65 +518,110 @@ img {
 	}
   }
 
-  /* Lightbox styles */
+  /* Lightbox Styles - Versión Full Size */
 .lightbox {
-	display: none;
-	position: fixed;
-	z-index: 9999;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.9);
-	text-align: center;
-  }
-  
-  .lightbox img {
-	max-width: 90%;
-	max-height: 80%;
-	margin-top: 5%;
-  }
-  
-  .lightbox:target {
-	display: block;
-	outline: none;
-  }
-  
-  .lightbox-close {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	color: white;
-	font-size: 30px;
-	text-decoration: none;
-	font-weight: bold;
-  }
-  
-  .lightbox-nav {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 20px;
-	box-sizing: border-box;
-  }
-  
-  .lightbox-nav a {
-	color: white;
-	font-size: 30px;
-	text-decoration: none;
-	font-weight: bold;
-	background-color: rgba(0, 0, 0, 0.5);
-	padding: 10px 20px;
-	border-radius: 50%;
-  }
-  
-  .grid img {
-	cursor: pointer;
-	transition: transform 0.3s;
-  }
-  
-  .grid img:hover {
-	transform: scale(1.02);
-  }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: none;
+    overflow: auto;
+}
+
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#lightbox-image {
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-caption {
+    color: white;
+    margin: 15px auto;
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 80%;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    color: #bbb;
+}
+
+.lightbox-nav {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    z-index: 10000;
+}
+
+.lightbox-prev, .lightbox-next {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Efecto al hacer clic en imágenes de galería */
+.gallery-image {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+}
+
+/* Para pantallas pequeñas, ajustamos el tamaño máximo */
+@media (max-width: 768px) {
+    #lightbox-image {
+        max-width: 100%;
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+    }
+}

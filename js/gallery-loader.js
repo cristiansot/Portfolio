@@ -26,14 +26,14 @@ const galleries = {
   }
 };
 
-// Variable global para almacenar las imágenes de cada galería
+// Objeto para almacenar datos de las galerías
 const galleryData = {};
 
 document.addEventListener('DOMContentLoaded', function() {
   // Carga las imágenes del slider principal
   loadSliderImages();
   
-  // Agrega el contenedor del lightbox al DOM
+  // Agrega el lightbox al DOM
   addLightboxToDOM();
   
   // Carga las galerías
@@ -44,14 +44,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function addLightboxToDOM() {
   const lightboxHTML = `
-      <div id="lightbox" class="lightbox" style="display: none;">
+      <div id="lightbox" class="lightbox">
           <span class="lightbox-close">&times;</span>
           <div class="lightbox-content">
               <img id="lightbox-image" src="" alt="">
               <div class="lightbox-caption"></div>
           </div>
-          <a class="lightbox-prev">&#10094;</a>
-          <a class="lightbox-next">&#10095;</a>
+          <div class="lightbox-nav">
+              <a class="lightbox-prev">&#10094;</a>
+              <a class="lightbox-next">&#10095;</a>
+          </div>
       </div>
   `;
   document.body.insertAdjacentHTML('beforeend', lightboxHTML);
@@ -69,13 +71,15 @@ function setupLightboxEvents() {
   closeBtn.addEventListener('click', closeLightbox);
   prevBtn.addEventListener('click', showPrevImage);
   nextBtn.addEventListener('click', showNextImage);
+  
+  // Cerrar al hacer clic fuera de la imagen
   lightbox.addEventListener('click', function(e) {
       if (e.target === lightbox) {
           closeLightbox();
       }
   });
   
-  // Teclado
+  // Navegación con teclado
   document.addEventListener('keydown', function(e) {
       if (lightbox.style.display === 'block') {
           if (e.key === 'Escape') closeLightbox();
@@ -136,7 +140,8 @@ function loadGalleryImages(category, config) {
       img.dataset.index = i - 1;
       
       // Agrega evento para abrir lightbox
-      img.addEventListener('click', function() {
+      img.addEventListener('click', function(e) {
+          e.preventDefault();
           openLightbox(category, parseInt(this.dataset.index));
       });
       
@@ -178,12 +183,22 @@ function openLightbox(gallery, index) {
   currentIndex = index;
   
   const imageData = galleryData[gallery][index];
-  lightboxImg.src = imageData.src;
-  lightboxImg.alt = imageData.alt;
-  caption.textContent = imageData.alt;
   
-  lightbox.style.display = 'block';
-  document.body.style.overflow = 'hidden';
+  // Crea una nueva imagen para precargar
+  const img = new Image();
+  img.onload = function() {
+      lightboxImg.src = imageData.src;
+      lightboxImg.alt = imageData.alt;
+      caption.textContent = imageData.alt;
+      
+      // Muestra el lightbox después de cargar la imagen
+      lightbox.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      
+      // Enfoca el lightbox para navegación por teclado
+      lightbox.focus();
+  };
+  img.src = imageData.src;
 }
 
 function closeLightbox() {
@@ -211,7 +226,16 @@ function updateLightboxImage() {
   const caption = document.querySelector('.lightbox-caption');
   
   const imageData = galleryData[currentGallery][currentIndex];
-  lightboxImg.src = imageData.src;
-  lightboxImg.alt = imageData.alt;
-  caption.textContent = imageData.alt;
+  
+  // Muestra un loader mientras carga la nueva imagen
+  lightboxImg.style.opacity = '0';
+  
+  const img = new Image();
+  img.onload = function() {
+      lightboxImg.src = imageData.src;
+      lightboxImg.alt = imageData.alt;
+      caption.textContent = imageData.alt;
+      lightboxImg.style.opacity = '1';
+  };
+  img.src = imageData.src;
 }
