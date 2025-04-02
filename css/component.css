@@ -23,6 +23,19 @@ html.js,
 	position: relative;
 }
 
+.card {
+	margin-bottom: 50px;
+}
+
+.btn-card{
+	display: flex;
+	gap: 10px;
+}
+
+.img-card {
+	border-radius: 40px !important;
+}
+
 .js .dragslider {
 	position: absolute;
 	top: 0;

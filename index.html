@@ -1,313 +1,436 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<title>Portfolio Cristian Soto M.</title>
-		<meta name="description" content="Portfolio Cristian Soto Morales, Designer" />
-		<meta name="keywords" content="draggable, slideshow, fullscreen, carousel, views, zoomed, 3d transform, perspective, dragdealer" />
-		<link rel="shortcut icon" href="./img/icons/17.svg">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/counter.css" />
-  		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<div class="container">
-		
-			<header id="header" class="codrops-header">
-				<button id="prev-btn" class="nav-btn">
-					<img class="img-arrow" src="img/icons/arrow-2.svg">
-				</button>
-				<button id="next-btn" class="nav-btn">
-					<img class="img-arrow" src="img/icons/arrow-1.svg">
-				</button>
-			</header>
-			
 
-			<div id="overlay" class="overlay">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio Cristian Soto M.</title>
+	<meta name="description" content="Portfolio Cristian Soto Morales, Designer" />
+	<meta name="keywords"
+		content="draggable, slideshow, fullscreen, carousel, views, zoomed, 3d transform, perspective, dragdealer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-grid.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="./img/icons/17.svg">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/counter.css" />
+	<script src="js/modernizr.custom.js"></script>
 
-			</div>
-			<div id="slideshow" class="dragslider">
-				<section class="img-dragger img-dragger-large dragdealer">
-					<div class="handle">
-						<div class="slide" data-content="content-1">
-							<div class="img-wrap"><img src="img/1.jpg" alt="img1"/></div>
-							<h2>Cristian Soto M.<span>Graphic Designer | Industrial Designer | UX/UI Designer | 3D Modeler | Software Developer (in progress) </span> <span class="phone">Phone: +569 3138 3575 <br> e-mail: csoto@gssd.cl</span></h2>
-							<button class="content-switch">Read more</button>
-							
-						</div>
-						<div class="slide" data-content="content-2">
-							<div class="img-wrap"><img src="img/2.jpg" alt="img2"/></div>
-							<h2>Graphic Design <span>Websites, brochures, banners, slides, advertising, logos, layouts, etc.</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						<div class="slide" data-content="content-3">
-							<div class="img-wrap"><img src="img/3.jpg" alt="img3"/></div>
-							<h2>Industrial Design<span>Planimetry, prototypes, cubing, structures & manufacturing</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						<div class="slide" data-content="content-4">
-							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
-							<h2>3D Models<span>Interfaces, HVAC, products, machines, operations, etc.</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						<div class="slide" data-content="content-5">
-							<div class="img-wrap"><img src="img/5.jpg" alt="img5"/></div>
-							<h2>Photography<span>Conceptual, nature & portrait</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						<div class="slide" data-content="content-6">
-							<div class="img-wrap"><img src="img/6.jpg" alt="img6"/></div>
-							<h2>Programming<span>Aplications, webs, Front-end</span></h2>
-							<button class="content-switch">Read more</button>
-						</div>
-						
-					</div>
-				</section><!-- /img-dragger-->
-				<!-- Content section -->
-				<section class="pages">
-					<div class="content" data-content="content-1">
-						
-						<div>
-							<h2 class="resume">Professional Summary</h2>
-							<p id="summary">Creative web Developer with over 20 years facilitating and supporting human interactions with complex systems and software.
-								Have professional experience with successful track record in developing innovative web designs and features. Possess solid
-								knowledge of HTML, CSS, JavaScript with ability to quickly learn new technologies. Demonstrated success in identifying and
-								resolving complex code issues. Experienced working with teams to produce impactful, leading-edge websites that engage
-								customers and deliver business results. Well-versed in design standards and user preferences.</p>
+</head>
 
-							<h3>Education</h3>
-							<h4 class="title">Frontend</h4>
-							<p id="bajada">Beca Corfo | Chile - Apr 2025<br></p>
+<body>
+	<div class="container">
 
-							<h4 class="title">Full Stack JS</h4>
-							<p id="bajada">Coding in Colour | Canada - Sept 2023<br></p>
-								
-							<h4 class="title">Comprehensive Design</h4>
-							<p id="bajada">IPCH | South America, Chile - Jan 2012<br></p>
-		
-							<h4 class="title">Professional Graphic Design</h4>
-							<p id="bajada">INACAP | South America, Chile - Dec 2001<br></p>
+		<header id="header" class="codrops-header">
+			<button id="prev-btn" class="nav-btn">
+				<img class="img-arrow" src="img/icons/arrow-2.svg">
+			</button>
+			<button id="next-btn" class="nav-btn">
+				<img class="img-arrow" src="img/icons/arrow-1.svg">
+			</button>
+		</header>
 
-							<h3>Work History</h3>
-							<p>Apr 2016 - Sep 2022<br></p>
-							<h4 class="title">UX/UI Designer<br></h4>
-							<p id="company">Graphic Solutions - South America, Chile</p><br>
-							
-							<p>Developed and maintained front-end code for websites, ensuring cross-browser compatibility and responsive design.
-								Implemented dynamic and interactive features using HTML, CSS, and React.<br>
-								Increased user satisfaction with mobile applications through the development of responsive and visually appealing interfaces.<br>
-								Improved website conversion rates through strategic placement of call-to-action elements within UI designs.<br>
-								Enhanced project efficiency by creating high-quality 3D models for various industries, including architecture, gaming, and film.<br><br></p>
+		<div id="overlay" class="overlay">
 
-							<p>Apr 2014 - May 2016<br></p>
-							<h4 class="title">Web Designer<br></h4>
-							<p id="company">Automa Electrónica - South America, Chile</p><br>
-							
-							<p>Used HTML/CSS editors like: Sublime Text, Visual Studio Code, or Atom for coding and styling which implemented usability enhancements based on user feedback,
-								resulting in a 30% decrease in support ticket submissions.<br>
-								Designed user interfaces using Figma and Adobe XD for multiple web applications, improving overall user experience and increasing user engagement.<br>
-								Boosted client satisfaction by delivering visually appealing and intuitive web designs tailored to their specific needs.<br>
-								Created custom graphics and icons using Adobe Photoshop & Illustrator that contributed to a visually cohesive brand identity across the website.<br><br></p>
+		</div>
+		<div id="slideshow" class="dragslider">
+			<section class="img-dragger img-dragger-large dragdealer">
+				<div class="handle">
 
-							<p>Jan 2008 - Feb 2014<br></p>
-							<h4 class="title">Website Developer<br></h4>
-							<p id="company">Depósito Central de Valores (DCV) - South America, Chile</p><br>
-							
-							<p>Maintaining the corporate Intranet website, designing corporate stationery (posters, flyers, packaging, mailings, inserts, virtual magazine, physical invitations, etc.)
-								Responsible for designing corporate manuals, software, spelling checkers, physical magazines.
-								Redesigned the homepage, leading to a 15% increase in user engagement metrics.
-								Implemented responsive design for a complex web application, reducing bounce rates on mobile devices by 25%.
-								Integrated third-party APIs to incorporate dynamic content and enhance overall website functionality.<br><br></p>
-
-							<p>Jan 2007 - Nov 2008<br></p>
-							<h4 class="title">Multimedia Designer<br></h4>
-							<p id="company">Solo Marketing - South America, Chile</p><br>
-							
-							<p>Designing and developing 3D prototypes for products, displays, or architectural visualization.<br>
-								Collaborated with cross-functional teams to develop cohesive branding strategies and visual identities for clients.<br>
-								Designing visually appealing stands and POP displays for retail environments, trade shows, and promotional events.<br>
-								Designed marketing materials such as brochures, flyers, and social media graphics for increased brand visibility.<br>
-								Created visually appealing eLearning modules for a variety of industries, improving employee training outcomes.<br>
-								Implemented accessible design principles across all digital assets, promoting inclusivity for users of varying abilities.<br><br></p>
-								
-							<br></br>
-							<br></br>
-						</div>
-
-						<div class="column2">
-
-							<h3>Skills</h3>
-							<h4 class="skills">Graphics designer<br>
-								Front-end programmer<br>
-								UX/UI designer<br>
-								Python programmer<br>
-								Javascript programmer<br>
-								3d modeler<br>
-								Adobe Suite<br>
-								HTML 5<br>
-								CSS<br>
-								Bootstrap<br>
-								Logic Pro<br>
-								WordPress<br>
-								3D MAX<br>
-								Vray<br>
-								Figma<br>
-								JavaScript<br>
-								Node.js<br>
-								React<br>
-								Git<br>
-								Python (elemental)<br>
-							</h4>
-							
-							<h3>Certifications</h3>
-							<h4 class="skills">PHP<br>
-								UX/UI Design<br>
-								Python (elemental)<br>
-								Full Stack Developer<br>
-								Teamwork<br>
-							</h4>
-							
-							<h3>Languages</h3>
-							<h4 class="skills">Spanish<br>
-								English<br>
-							</h4>
-
-							<H4 class="related">
-								<h3>Let's work? <a href="mailto:csoto@gssd.cl">Write me</a></h3> 
-							</H4>
-						</div>
+					<div class="slide" data-content="content-1">
+						<div class="img-wrap"><img src="img/1.jpg" alt="img1" /></div>
+						<h2>Cristian Soto M.<span>Graphic Designer | Industrial Designer | UX/UI Designer | 3D Modeler |
+							Software Developer (in progress) </span> <span class="phone">Phone: +569 3138 3575 <br>
+							e-mail: csoto@gssd.cl</span></h2>
+						<button class="content-switch">Read more</button>
 					</div>
 
-					<div class="content" data-content="content-2">
-						<div class="masonry">
-							<div class="grid">
-								<div class="grid" id="gallery-designs"></div>
+					<div class="slide" data-content="content-2">
+						<div class="img-wrap"><img src="img/2.jpg" alt="img2" /></div>
+						<h2>Graphic Design <span>Websites, brochures, banners, slides, advertising, logos, layouts,
+								etc.</span></h2>
+						<button class="content-switch">Read more</button>
+					</div>
+					<div class="slide" data-content="content-3">
+						<div class="img-wrap"><img src="img/3.jpg" alt="img3" /></div>
+						<h2>Industrial Design<span>Planimetry, prototypes, cubing, structures & manufacturing</span>
+						</h2>
+						<button class="content-switch">Read more</button>
+					</div>
+					<div class="slide" data-content="content-4">
+						<div class="img-wrap"><img src="img/4.jpg" alt="img4" /></div>
+						<h2>3D Models<span>Interfaces, HVAC, products, machines, operations, etc.</span></h2>
+						<button class="content-switch">Read more</button>
+					</div>
+					<div class="slide" data-content="content-5">
+						<div class="img-wrap"><img src="img/5.jpg" alt="img5" /></div>
+						<h2>Photography<span>Conceptual, nature & portrait</span></h2>
+						<button class="content-switch">Read more</button>
+					</div>
+					<div class="slide" data-content="content-6">
+						<div class="img-wrap"><img src="img/6.jpg" alt="img6" /></div>
+						<h2>Programming<span>Aplications, webs, Front-end</span></h2>
+						<button class="content-switch">Read more</button>
+					</div>
+
+				</div>
+			</section><!-- /img-dragger-->
+			<!-- Content section -->
+			<section class="pages">
+				<div class="content" data-content="content-1">
+
+					<div>
+						<h2 class="resume">Professional Summary</h2>
+						<p id="summary">Creative web Developer with over 20 years facilitating and supporting human
+							interactions with complex systems and software.
+							Have professional experience with successful track record in developing innovative web
+							designs and features. Possess solid
+							knowledge of HTML, CSS, JavaScript with ability to quickly learn new technologies.
+							Demonstrated success in identifying and
+							resolving complex code issues. Experienced working with teams to produce impactful,
+							leading-edge websites that engage
+							customers and deliver business results. Well-versed in design standards and user
+							preferences.</p>
+
+						<h3>Education</h3>
+						<h4 class="title">Frontend</h4>
+						<p id="bajada">Beca Corfo | Chile - Apr 2025<br></p>
+
+						<h4 class="title">Full Stack JS</h4>
+						<p id="bajada">Coding in Colour | Canada - Sept 2023<br></p>
+
+						<h4 class="title">Comprehensive Design</h4>
+						<p id="bajada">IPCH | South America, Chile - Jan 2012<br></p>
+
+						<h4 class="title">Professional Graphic Design</h4>
+						<p id="bajada">INACAP | South America, Chile - Dec 2001<br></p>
+
+						<h3>Work History</h3>
+						<p>Apr 2016 - Sep 2022<br></p>
+						<h4 class="title">UX/UI Designer<br></h4>
+						<p id="company">Graphic Solutions - South America, Chile</p><br>
+
+						<p>Developed and maintained front-end code for websites, ensuring cross-browser compatibility
+							and responsive design.
+							Implemented dynamic and interactive features using HTML, CSS, and React.<br>
+							Increased user satisfaction with mobile applications through the development of responsive
+							and visually appealing interfaces.<br>
+							Improved website conversion rates through strategic placement of call-to-action elements
+							within UI designs.<br>
+							Enhanced project efficiency by creating high-quality 3D models for various industries,
+							including architecture, gaming, and film.<br><br></p>
+
+						<p>Apr 2014 - May 2016<br></p>
+						<h4 class="title">Web Designer<br></h4>
+						<p id="company">Automa Electrónica - South America, Chile</p><br>
+
+						<p>Used HTML/CSS editors like: Sublime Text, Visual Studio Code, or Atom for coding and styling
+							which implemented usability enhancements based on user feedback,
+							resulting in a 30% decrease in support ticket submissions.<br>
+							Designed user interfaces using Figma and Adobe XD for multiple web applications, improving
+							overall user experience and increasing user engagement.<br>
+							Boosted client satisfaction by delivering visually appealing and intuitive web designs
+							tailored to their specific needs.<br>
+							Created custom graphics and icons using Adobe Photoshop & Illustrator that contributed to a
+							visually cohesive brand identity across the website.<br><br></p>
+
+						<p>Jan 2008 - Feb 2014<br></p>
+						<h4 class="title">Website Developer<br></h4>
+						<p id="company">Depósito Central de Valores (DCV) - South America, Chile</p><br>
+
+						<p>Maintaining the corporate Intranet website, designing corporate stationery (posters, flyers,
+							packaging, mailings, inserts, virtual magazine, physical invitations, etc.)
+							Responsible for designing corporate manuals, software, spelling checkers, physical
+							magazines.
+							Redesigned the homepage, leading to a 15% increase in user engagement metrics.
+							Implemented responsive design for a complex web application, reducing bounce rates on mobile
+							devices by 25%.
+							Integrated third-party APIs to incorporate dynamic content and enhance overall website
+							functionality.<br><br></p>
+
+						<p>Jan 2007 - Nov 2008<br></p>
+						<h4 class="title">Multimedia Designer<br></h4>
+						<p id="company">Solo Marketing - South America, Chile</p><br>
+
+						<p>Designing and developing 3D prototypes for products, displays, or architectural
+							visualization.<br>
+							Collaborated with cross-functional teams to develop cohesive branding strategies and visual
+							identities for clients.<br>
+							Designing visually appealing stands and POP displays for retail environments, trade shows,
+							and promotional events.<br>
+							Designed marketing materials such as brochures, flyers, and social media graphics for
+							increased brand visibility.<br>
+							Created visually appealing eLearning modules for a variety of industries, improving employee
+							training outcomes.<br>
+							Implemented accessible design principles across all digital assets, promoting inclusivity
+							for users of varying abilities.<br><br></p>
+
+						<br></br>
+						<br></br>
+					</div>
+
+					<div class="column2">
+
+						<h3>Skills</h3>
+						<h4 class="skills">Graphics designer<br>
+							Front-end programmer<br>
+							UX/UI designer<br>
+							Python programmer<br>
+							Javascript programmer<br>
+							3d modeler<br>
+							Adobe Suite<br>
+							HTML 5<br>
+							CSS<br>
+							Bootstrap<br>
+							Logic Pro<br>
+							WordPress<br>
+							3D MAX<br>
+							Vray<br>
+							Figma<br>
+							JavaScript<br>
+							Node.js<br>
+							React<br>
+							Git<br>
+							Python (elemental)<br>
+						</h4>
+
+						<h3>Certifications</h3>
+						<h4 class="skills">PHP<br>
+							UX/UI Design<br>
+							Python (elemental)<br>
+							Full Stack Developer<br>
+							Teamwork<br>
+						</h4>
+
+						<h3>Languages</h3>
+						<h4 class="skills">Spanish<br>
+							English<br>
+						</h4>
+
+						<H4 class="related">
+							<h3>Let's work? <a href="mailto:csoto@gssd.cl">Write me</a></h3>
+						</H4>
+					</div>
+				</div>
+
+				<div class="content" data-content="content-2">
+					<div class="masonry">
+						<div class="grid">
+							<div class="grid" id="gallery-designs"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content" data-content="content-3">
+					<div class="masonry">
+						<div class="grid">
+							<div class="grid" id="gallery-industrial"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content" data-content="content-4">
+					<div class="masonry">
+						<div class="grid">
+							<div class="grid" id="gallery-3d"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content" data-content="content-5">
+					<div class="masonry">
+						<div class="grid">
+							<div class="grid" id="gallery-photos"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content" data-content="content-6">
+					<div class="container">
+						<div class="row">
+							<!-- Carta 1 -->
+							<div class="col-md-4">
+								<div class="card">
+									<img class="img-card" src="img/cards/card1.jpg" class="card-img-top" alt="Imagen 1">
+									<div class="card-body">
+										<h4 class="card-title">Mini Game Portal</h4>
+										<div class="btn-card">
+											<a href="https://github.com/cristiansot/mini-game-portal" target="_blank" class="btn btn-primary">Github</a>
+											<a href="https://cristiansot.github.io/mini-game-portal/" target="_blank" class="btn btn-primary">See Project</a>
+										</div>
+									</div>
+								</div>
 							</div>
+							<!-- Carta 2 -->
+							<div class="col-md-4">
+								<div class="card">
+									<img class="img-card" src="img/cards/card2.jpg" class="card-img-top" alt="Imagen 2">
+									<div class="card-body">
+										<h4 class="card-title">API Movie Discovery</h4>
+										<div class="btn-card">
+											<a href="https://github.com/cristiansot/API-Movie-Discovery" target="_blank" class="btn btn-primary">Github</a>
+											<a href="http://www.gssd.cl/api/" target="_blank" class="btn btn-primary">See Project</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Carta 3 -->
+							<div class="col-md-4">
+								<div class="card">
+									<img class="img-card" src="img/cards/card3.jpg" class="card-img-top" alt="Imagen 3">
+									<div class="card-body">
+										<h4 class="card-title">React Book List</h4>
+										<div class="btn-card">
+											<a href="https://github.com/cristiansot/React-Book-List" target="_blank" class="btn btn-primary">Github</a>
+											<a href="http://www.gssd.cl/reactbooklist/" target="_blank" class="btn btn-primary">See Project</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Carta 4 -->
+							<div class="col-md-4">
+								<div class="card">
+									<img class="img-card" src="img/cards/card4.jpg" class="card-img-top" alt="Imagen 2">
+									<div class="card-body">
+										<h4 class="card-title">Nutrition Log</h4>
+										<div class="btn-card">
+											<a href="https://github.com/cristiansot/Nutrition-Log" target="_blank" class="btn btn-primary">Github</a>
+											<a href="https://cristiansot.github.io/Nutrition-Log/" target="_blank" class="btn btn-primary">See Project</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Carta 5 -->
+							<div class="col-md-4">
+								<div class="card">
+									<img class="img-card" src="img/cards/card5.jpg" class="card-img-top" alt="Imagen 2">
+									<div class="card-body">
+										<h4 class="card-title">THP Web Site</h4>
+										<div class="btn-card">
+											<a href="https://github.com/cristiansot/THP-website" target="_blank" class="btn btn-primary">Github</a>
+											<a href="https://thp.cl/" target="_blank" class="btn btn-primary">See Project</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Carta 6 -->
+							<div class="col-md-4">
+								<div class="card">
+									<img class="img-card" src="img/cards/card6.jpg" class="card-img-top" alt="Imagen 2">
+									<div class="card-body">
+										<h4 class="card-title">Enquadre Website</h4>
+										<div class="btn-card">
+											<a href="https://github.com/cristiansot/enquadre-website" target="_blank" class="btn btn-primary">Github</a>
+											<a href="https://www.enquadre.cl/" target="_blank" class="btn btn-primary">See Project</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
 						</div>
 					</div>
-					<div class="content" data-content="content-3">
-						<div class="masonry">
-							<div class="grid">
-								<div class="grid" id="gallery-industrial"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content" data-content="content-4">
-						<div class="masonry">
-							<div class="grid">
-								<div class="grid" id="gallery-3d"></div>
-							</div>
-						</div>
-					</div>
-					<div class="content" data-content="content-5">
-						<div class="masonry">
-							<div class="grid">
-								<div class="grid" id="gallery-photos"></div>
-							</div>
-						</div>
-				</section>
-			</div>
-		</div><!-- /container --> 
-		<script src="js/dragdealer.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/dragslideshow.js"></script>
-		<script src="js/dragdealer.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/dragslideshow.js"></script>
-		<script src="js/gallery-loader.js"></script>
-		<script src="js/hidden.js"></script>
-		<script>
-		(function() {
-    	var overlay = document.getElementById('overlay'),
-        header = document.getElementById('header'),
-        prevBtn = document.getElementById('prev-btn'),
-        nextBtn = document.getElementById('next-btn'),
-        
-        toggleControlsVisibility = function() {
-            if(!slideshow.isContent) {
-                classie.add(header, 'hide');
-            } else {
-                classie.remove(header, 'hide');
-            }
-        },
-        
-        slideshow = new DragSlideshow(document.getElementById('slideshow'), { 
-            onToggleContent: toggleControlsVisibility,
-            onToggleContentComplete: toggleControlsVisibility,
-            onSlideChange: function(currentSlide) {
-                const slides = this.slides;
-                const prev = (currentSlide - 1 + slides.length) % slides.length;
-                const next = (currentSlide + 1) % slides.length;
-                
-                [currentSlide, prev, next].forEach(index => {
-                    const img = slides[index].querySelector('.img-wrap img');
-                    if (img && img.dataset && img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy-load');
-                        delete img.dataset.src;
-                    }
-                });
-            }
-        }),
-        
-        navigateTo = function(direction, e) {
-            if (e) e.stopPropagation();
-            if (slideshow.isContent || slideshow.isAnimating) return;
-            
-            const current = slideshow.current;
-            const total = slideshow.slidesCount;
-            
-            if (direction === 'prev') {
-                slideshow.dd.setStep(current === 0 ? total : current);
-            } else {
-                slideshow.dd.setStep(current + 2 > total ? 1 : current + 2);
-            }
-        };
+				</div>
+					
+			</section>
+		</div>
+	</div><!-- /container -->
+	<script src="js/dragdealer.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/dragslideshow.js"></script>
+	<script src="js/dragdealer.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/dragslideshow.js"></script>
+	<script src="js/gallery-loader.js"></script>
+	<script src="js/hidden.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		(function () {
+			var overlay = document.getElementById('overlay'),
+				header = document.getElementById('header'),
+				prevBtn = document.getElementById('prev-btn'),
+				nextBtn = document.getElementById('next-btn'),
 
-    // Event listeners para los botones
-    prevBtn.addEventListener('click', function(e) { navigateTo('prev', e); });
-    nextBtn.addEventListener('click', function(e) { navigateTo('next', e); });
+				toggleControlsVisibility = function () {
+					if (!slideshow.isContent) {
+						classie.add(header, 'hide');
+					} else {
+						classie.remove(header, 'hide');
+					}
+				},
 
-    // Precarga de imágenes
-    const sliderImages = [
-        { src: 'img/1.jpg', alt: 'Cristian Soto Morales portfolio' },
-        { src: 'img/2.jpg', alt: 'Graphic design examples' },
-        { src: 'img/3.jpg', alt: 'Industrial design projects' },
-        { src: 'img/4.jpg', alt: '3D models portfolio' },
-        { src: 'img/5.jpg', alt: 'Photography work' }
-    ];
+				slideshow = new DragSlideshow(document.getElementById('slideshow'), {
+					onToggleContent: toggleControlsVisibility,
+					onToggleContentComplete: toggleControlsVisibility,
+					onSlideChange: function (currentSlide) {
+						const slides = this.slides;
+						const prev = (currentSlide - 1 + slides.length) % slides.length;
+						const next = (currentSlide + 1) % slides.length;
 
-    document.querySelectorAll('.slide').forEach((slide, index) => {
-        const imgWrap = slide.querySelector('.img-wrap');
-        if (imgWrap && sliderImages[index]) {
-            const img = document.createElement('img');
-            img.src = sliderImages[index].src;
-            img.alt = sliderImages[index].alt;
-            img.loading = 'lazy';
-            imgWrap.appendChild(img);
-        }
-    });
+						[currentSlide, prev, next].forEach(index => {
+							const img = slides[index].querySelector('.img-wrap img');
+							if (img && img.dataset && img.dataset.src) {
+								img.src = img.dataset.src;
+								img.classList.remove('lazy-load');
+								delete img.dataset.src;
+							}
+						});
+					}
+				}),
 
-    // Navegación por teclado
-    document.addEventListener('keydown', function(e) {
-        if (slideshow.isContent) return;
-        
-        var keyCode = e.keyCode || e.which;
-        switch(keyCode) {
-            case 37: // flecha izquierda
-                navigateTo('prev');
-                break;
-            case 39: // flecha derecha
-                navigateTo('next');
-                break;
-        }
-    });
-})();
-		</script>
-	</body>
+				navigateTo = function (direction, e) {
+					if (e) e.stopPropagation();
+					if (slideshow.isContent || slideshow.isAnimating) return;
+
+					const current = slideshow.current;
+					const total = slideshow.slidesCount;
+
+					if (direction === 'prev') {
+						slideshow.dd.setStep(current === 0 ? total : current);
+					} else {
+						slideshow.dd.setStep(current + 2 > total ? 1 : current + 2);
+					}
+				};
+
+			// Event listeners para los botones
+			prevBtn.addEventListener('click', function (e) { navigateTo('prev', e); });
+			nextBtn.addEventListener('click', function (e) { navigateTo('next', e); });
+
+			// Precarga de imágenes
+			const sliderImages = [
+				{ src: 'img/1.jpg', alt: 'Cristian Soto Morales portfolio' },
+				{ src: 'img/2.jpg', alt: 'Graphic design examples' },
+				{ src: 'img/3.jpg', alt: 'Industrial design projects' },
+				{ src: 'img/4.jpg', alt: '3D models portfolio' },
+				{ src: 'img/5.jpg', alt: 'Photography work' }
+			];
+
+			document.querySelectorAll('.slide').forEach((slide, index) => {
+				const imgWrap = slide.querySelector('.img-wrap');
+				if (imgWrap && sliderImages[index]) {
+					const img = document.createElement('img');
+					img.src = sliderImages[index].src;
+					img.alt = sliderImages[index].alt;
+					img.loading = 'lazy';
+					imgWrap.appendChild(img);
+				}
+			});
+
+			// Navegación por teclado
+			document.addEventListener('keydown', function (e) {
+				if (slideshow.isContent) return;
+
+				var keyCode = e.keyCode || e.which;
+				switch (keyCode) {
+					case 37: // flecha izquierda
+						navigateTo('prev');
+						break;
+					case 39: // flecha derecha
+						navigateTo('next');
+						break;
+				}
+			});
+		})();
+	</script>
+</body>
+
 </html>
