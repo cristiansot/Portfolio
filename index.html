@@ -19,8 +19,15 @@
 		<div class="container">
 		
 			<header id="header" class="codrops-header">
-				<button class="slider-switch">Switch view</button>
+				<button id="prev-btn" class="nav-btn">
+					<img class="img-arrow" src="img/icons/arrow-2.svg">
+				</button>
+				<button id="next-btn" class="nav-btn">
+					<img class="img-arrow" src="img/icons/arrow-1.svg">
+				</button>
 			</header>
+			
+
 			<div id="overlay" class="overlay">
 
 			</div>
@@ -51,6 +58,11 @@
 						<div class="slide" data-content="content-5">
 							<div class="img-wrap"><img src="img/5.jpg" alt="img5"/></div>
 							<h2>Photography<span>Conceptual, nature & portrait</span></h2>
+							<button class="content-switch">Read more</button>
+						</div>
+						<div class="slide" data-content="content-6">
+							<div class="img-wrap"><img src="img/6.jpg" alt="img6"/></div>
+							<h2>Programming<span>Aplications, webs, Front-end</span></h2>
 							<button class="content-switch">Read more</button>
 						</div>
 						
@@ -207,90 +219,95 @@
 		<script src="js/dragdealer.js"></script>
 		<script src="js/classie.js"></script>
 		<script src="js/dragslideshow.js"></script>
-		<script src="js/gallery-loader.js"></script> 
+		<script src="js/gallery-loader.js"></script>
+		<script src="js/hidden.js"></script>
 		<script>
 		(function() {
-			var overlay = document.getElementById('overlay'),
-				overlayClose = overlay.querySelector('button'),
-				header = document.getElementById('header'),
-				switchBtnn = header.querySelector('button.slider-switch'),
-				
-				toggleBtnn = function() {
-				if(slideshow.isFullscreen) {
-					classie.add(switchBtnn, 'view-maxi');
-				} else {
-					classie.remove(switchBtnn, 'view-maxi');
-				}
-				},
-				
-				toggleCtrls = function() {
-				if(!slideshow.isContent) {
-					classie.add(header, 'hide');
-				}
-				},
-				
-				toggleCompleteCtrls = function() {
-				if(!slideshow.isContent) {
-					classie.remove(header, 'hide');
-				}
-				},
-				
-				// Configuración ampliada del slideshow con carga de imágenes
-				slideshow = new DragSlideshow(document.getElementById('slideshow'), { 
-				onToggle: toggleBtnn,
-				onToggleContent: toggleCtrls,
-				onToggleContentComplete: toggleCompleteCtrls,
-				onSlideChange: function(currentSlide) {
-					// Precarga imágenes adyacentes del slider
-					const slides = this.slides;
-					const prev = (currentSlide - 1 + slides.length) % slides.length;
-					const next = (currentSlide + 1) % slides.length;
-					
-					[currentSlide, prev, next].forEach(index => {
-					const img = slides[index].querySelector('.img-wrap img');
-					if (img && img.dataset && img.dataset.src) {
-						img.src = img.dataset.src;
-						img.classList.remove('lazy-load');
-						delete img.dataset.src;
-					}
-					});
-				}
-				}),
-				
-				toggleSlideshow = function() {
-				slideshow.toggle();
-				toggleBtnn();
-				},
-				
-				closeOverlay = function() {
-				classie.add(overlay, 'hide');
-				};
+    	var overlay = document.getElementById('overlay'),
+        header = document.getElementById('header'),
+        prevBtn = document.getElementById('prev-btn'),
+        nextBtn = document.getElementById('next-btn'),
+        
+        toggleControlsVisibility = function() {
+            if(!slideshow.isContent) {
+                classie.add(header, 'hide');
+            } else {
+                classie.remove(header, 'hide');
+            }
+        },
+        
+        slideshow = new DragSlideshow(document.getElementById('slideshow'), { 
+            onToggleContent: toggleControlsVisibility,
+            onToggleContentComplete: toggleControlsVisibility,
+            onSlideChange: function(currentSlide) {
+                const slides = this.slides;
+                const prev = (currentSlide - 1 + slides.length) % slides.length;
+                const next = (currentSlide + 1) % slides.length;
+                
+                [currentSlide, prev, next].forEach(index => {
+                    const img = slides[index].querySelector('.img-wrap img');
+                    if (img && img.dataset && img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy-load');
+                        delete img.dataset.src;
+                    }
+                });
+            }
+        }),
+        
+        navigateTo = function(direction, e) {
+            if (e) e.stopPropagation();
+            if (slideshow.isContent || slideshow.isAnimating) return;
+            
+            const current = slideshow.current;
+            const total = slideshow.slidesCount;
+            
+            if (direction === 'prev') {
+                slideshow.dd.setStep(current === 0 ? total : current);
+            } else {
+                slideshow.dd.setStep(current + 2 > total ? 1 : current + 2);
+            }
+        };
 
-			// Event listeners
-			switchBtnn.addEventListener('click', toggleSlideshow);
-			overlayClose.addEventListener('click', closeOverlay);
+    // Event listeners para los botones
+    prevBtn.addEventListener('click', function(e) { navigateTo('prev', e); });
+    nextBtn.addEventListener('click', function(e) { navigateTo('next', e); });
 
-			// Carga inicial de imágenes del slider (ahora manejada dinámicamente)
-			const sliderImages = [
-			{ src: 'img/1.jpg', alt: 'Cristian Soto Morales portfolio' },
-			{ src: 'img/2.jpg', alt: 'Graphic design examples' },
-			{ src: 'img/3.jpg', alt: 'Industrial design projects' },
-			{ src: 'img/4.jpg', alt: '3D models portfolio' },
-			{ src: 'img/5.jpg', alt: 'Photography work' }
-			];
+    // Precarga de imágenes
+    const sliderImages = [
+        { src: 'img/1.jpg', alt: 'Cristian Soto Morales portfolio' },
+        { src: 'img/2.jpg', alt: 'Graphic design examples' },
+        { src: 'img/3.jpg', alt: 'Industrial design projects' },
+        { src: 'img/4.jpg', alt: '3D models portfolio' },
+        { src: 'img/5.jpg', alt: 'Photography work' }
+    ];
 
-			document.querySelectorAll('.slide').forEach((slide, index) => {
-			const imgWrap = slide.querySelector('.img-wrap');
-			if (imgWrap && sliderImages[index]) {
-				const img = document.createElement('img');
-				img.src = sliderImages[index].src;
-				img.alt = sliderImages[index].alt;
-				img.loading = 'lazy';
-				imgWrap.appendChild(img);
-			}
-			});
+    document.querySelectorAll('.slide').forEach((slide, index) => {
+        const imgWrap = slide.querySelector('.img-wrap');
+        if (imgWrap && sliderImages[index]) {
+            const img = document.createElement('img');
+            img.src = sliderImages[index].src;
+            img.alt = sliderImages[index].alt;
+            img.loading = 'lazy';
+            imgWrap.appendChild(img);
+        }
+    });
 
-		})();
+    // Navegación por teclado
+    document.addEventListener('keydown', function(e) {
+        if (slideshow.isContent) return;
+        
+        var keyCode = e.keyCode || e.which;
+        switch(keyCode) {
+            case 37: // flecha izquierda
+                navigateTo('prev');
+                break;
+            case 39: // flecha derecha
+                navigateTo('next');
+                break;
+        }
+    });
+})();
 		</script>
 	</body>
 </html>
