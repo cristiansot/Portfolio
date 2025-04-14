@@ -2,7 +2,7 @@
 const galleries = {
   'designs': {
       containerId: 'gallery-designs',
-      count: 90,
+      count: 93,
       path: './img/designs/',
       altPrefix: 'Graphic design work'
   },
